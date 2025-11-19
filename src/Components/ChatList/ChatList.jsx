@@ -12,7 +12,7 @@ const ChatList = ({contacts}) => {
       {contacts.map(
         (contact) => {
           return (
-            <Link to='/chat/{contact.id}' key={contact.id} className="chat_link">
+            <Link to={'/chat/' + contact.id} key={contact.id} className="chat_link">
               <img className="profile_picture" src={contact.profile_picture} alt={'Foto de ' + contact.name}/>
               <h2 className="profile_name">{contact.name}</h2>
               <span className="last_connection">{contact.last_connection}</span>
