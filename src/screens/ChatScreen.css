@@ -1,15 +1,7 @@
-:root{
-    --primary-color: #D2CCA1;
-    --secondary-color: #60435F;
-    --background-color: #DBD4D3;
-    --text-color: #000000;
-
-}
-
-.montserrat-titulo {
-  font-family: "Montserrat", sans-serif;
+.titulo {
+  font-family: var(--font-family);
   font-optical-sizing: auto;
-  font-weight: 800;
+    font-weight: var(--fw-bold);
   font-style: normal;
 }
 

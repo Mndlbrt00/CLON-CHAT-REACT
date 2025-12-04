@@ -12,7 +12,7 @@
   min-height: 70px;
   max-height: 300px;
   padding: 12px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   border: 1px solid #ccc;
   resize: none;
   font-size: 16px;
@@ -26,43 +26,19 @@
 }
 
 .message-input:focus {
-  border-color: #4a8ef1;
+  border-color: var(--focus-color);
 }
 
 .submit-button {
   justify-content: center;
   padding: 8px 14px;
   margin: 6px 0 0 0;
-  background-color: #4CAF50;
+  background-color: var(--button-color);
   color: white;
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-family: var(--font-family);
+  font-weight: var(--fw-semibold);
   align-self: flex-end;
-}
-
-/* fixed container at the bottom */
-.create-message {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 14px 16px;
-  background: rgba(255,255,255,0.98);
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.12);
-  z-index: 1000;
-}
-
-/* make sure form children layout nicely when fixed */
-.create-message > div {
-  margin-bottom: 8px;
-}
-
-@media (min-width: 600px) {
-  .create-message {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
 }

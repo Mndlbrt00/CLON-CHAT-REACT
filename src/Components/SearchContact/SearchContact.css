@@ -1,26 +1,44 @@
 
 
 .chatlist-top{
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-family);
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     font-style: normal;
     text-decoration: none;
     align-items: center;
-    color: #fffef8;
+    color: var(--accent-text);
     padding: 0px 10px;
-    border: 2px solid #E83151;
-    border-radius: 7px;
-    background-color: #df405a;
+    border: 2px solid var(--accent-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--accent-bg);
 }
 
 .contact-link{
-     font-family: "Montserrat", sans-serif;
+    font-family: var(--font-family);
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     font-style: normal;
     text-decoration: none;
     align-items: center;
-    color: #fffef8;
-    text-decoration: none;
+    color: var(--accent-text);
+}
+
+.search-input{
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-input::placeholder {
+  font-family: 'comic sans ms', sans-serif;
+  font-size: 14px;
+  color: #696869;
+}
+
+.search-input:focus {
+  border-color: var(--focus-color);
 }

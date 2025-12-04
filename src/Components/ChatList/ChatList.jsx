@@ -21,7 +21,7 @@ const ChatList = () => {
       <div className="chat-list-container">
         <SearchContact />
         {listToRender.length === 0 ? (
-          <div className="no-results">No hay contactos</div>
+          <div className="no-results">No hay contactos con ese nombre</div>
         ) : (
           listToRender.map((contact) => (
             <Link to={'/chat/' + contact.id} key={contact.id} className="chat-link">

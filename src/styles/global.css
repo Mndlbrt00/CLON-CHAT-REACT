@@ -1,0 +1,31 @@
+:root {
+    
+    --font-family: "Montserrat", sans-serif;
+    --font-optical-sizing: 1000px;
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 800;
+
+    
+    --accent-border: #E83151;
+    --accent-bg: #df405a;
+    --accent-text: #fffef8;
+    --accent-contrast: #e99aa7;
+    --focus-color: #4a8ef1;
+    --button-color: #4CAF50;
+    --card-bg: #d2cca1;
+    --card-text: #000000;
+    --background-color: #DBD4D3;
+    --secondary-color: #60435F;
+
+    
+    --radius-sm: 7px;
+    --radius-md: 8px;
+    --radius-lg: 15px;
+
+    
+    --profile-pic-size: 50px;
+}
+
+/* Reuseable helper classes (optional) */
+.u-montserrat { font-family: var(--font-family); }
