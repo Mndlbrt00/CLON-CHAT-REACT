@@ -25,6 +25,10 @@
 
     
     --profile-pic-size: 50px;
+    /* Placeholder styling shared across components */
+    --placeholder-font-family: 'comic sans ms', sans-serif;
+    --placeholder-font-size: 14px;
+    --placeholder-color: #696869;
 }
 
 /* Reuseable helper classes (optional) */

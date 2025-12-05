@@ -20,9 +20,9 @@
 }
 
 .message-input::placeholder {
-  font-family: 'comic sans ms', sans-serif;
-  font-size: 14px;
-  color: #696869;
+  font-family: var(--placeholder-font-family);
+  font-size: var(--placeholder-font-size);
+  color: var(--placeholder-color);
 }
 
 .message-input:focus {
