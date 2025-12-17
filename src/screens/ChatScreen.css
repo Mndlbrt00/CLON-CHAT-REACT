@@ -45,7 +45,7 @@
 
 .chat-detail {
   flex: 1 1 0;
-  padding: 20px;
+  padding: 10px; /* match chat-list container padding to align sticky bottoms */
   overflow-y: auto;
 }
 

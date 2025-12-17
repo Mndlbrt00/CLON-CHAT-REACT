@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import './ChatList.css'
-import { useContext } from "react";
+import { useContext, useRef, useEffect } from "react";
 import { ContactContext } from "../../contexts/ContactContext.jsx";
 import AddNewContact from "../AddNewContact/AddNewContact";
 import SearchContact from "../SearchContact/SearchContact.jsx";
@@ -15,6 +15,18 @@ const ChatList = () => {
     ? contactosFiltrados
     : contacts;
 
+  const scrollRef = useRef(null);
+  const prevListLengthRef = useRef(listToRender.length);
+
+  useEffect(() => {
+    const prev = prevListLengthRef.current;
+    const current = listToRender.length;
+    if (current > prev && scrollRef.current) {
+      scrollRef.current.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
+    }
+    prevListLengthRef.current = current;
+  }, [listToRender.length]);
+
   return (
     <div className="chat-list-full-side">
       <div className="chat-list-container">
@@ -25,7 +37,7 @@ const ChatList = () => {
         {listToRender.length === 0 ? (
           <div className="no-results">No hay contactos con ese nombre</div>
         ) : (
-          <div className="chat-list-scroll">
+          <div className="chat-list-scroll" ref={scrollRef}>
             {listToRender.map((contact) => (
               <Link to={'/chat/' + contact.id} key={contact.id} className="chat-link">
                 <img className="profile-picture" src={contact.profile_picture} alt={'Foto de ' + contact.name} />

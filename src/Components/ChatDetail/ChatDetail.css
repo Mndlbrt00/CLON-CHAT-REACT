@@ -1,0 +1,58 @@
+/* Layout for chat detail: sticky header, scrollable messages, sticky input */
+.full-chat-detail {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0; /* allow flex children to scroll properly */
+}
+
+.chat-detail-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--background-color, #fff);
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.chat-detail-messages {
+  flex: 1 1 auto;
+  min-height: 0; /* critical for children to be able to scroll */
+  overflow: auto;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* keep layout stable when scrollbar appears so sticky bottoms align visually */
+.chat-detail-messages { scrollbar-gutter: stable; }
+
+.chat-detail-messages::-webkit-scrollbar { width: 8px; }
+.chat-detail-messages::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 6px; }
+
+.new-message-input {
+  position: sticky;
+  bottom: 0;
+  z-index: 25;
+  background: var(--background-color, #fff);
+  padding: 10px 16px; /* align with chat-list wrapper padding */
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Normalize inner form spacing and remove its border so visuals match AddNewContact */
+.new-message-input .form-group {
+  margin: 0;
+  padding: 10px;
+  border: none !important;
+  box-sizing: border-box;
+}
+
+/* Make sure inner message containers don't force the scroll container to overflow incorrectly */
+.message-container { word-break: break-word; }
+
+@media (max-width: 768px) {
+  .chat-detail-header { padding: 10px 12px; }
+  .chat-detail-messages { padding: 10px 12px; }
+  .new-message-input { padding: 8px 12px; }
+}
