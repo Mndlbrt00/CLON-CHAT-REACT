@@ -33,3 +33,7 @@
 
 /* Reuseable helper classes (optional) */
 .u-montserrat { font-family: var(--font-family); }
+
+html, body{
+    background-color: var(--background-color);
+}

@@ -1,4 +1,3 @@
-
 .chat-list-full-side {
     height: 100%;
     display: flex;
@@ -88,19 +87,32 @@
     .last-connection { font-size: 0.8rem; }
 }
 
-/* Animated list container should take remaining space and scroll internally */
+/* Unified styles for the chat list scroll */
 .chat-list-scroll {
     flex: 1 1 auto;
     min-height: 0; /* allow flex child to shrink for scrolling */
-    overflow: auto;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 6px;
     padding-right: 6px; /* allow room for scrollbar */
+    max-height: 50vh; /* Reduced height to leave space for AddNewContact */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-gutter: stable; /* keep layout stable when scrollbar appears */
 }
 
-/* keep layout stable when scrollbar appears so sticky bottoms align visually */
-.chat-list-scroll { scrollbar-gutter: stable; }
+.chat-list-scroll::-webkit-scrollbar {
+    width: 8px; /* For WebKit browsers */
+}
+
+.chat-list-scroll::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.chat-list-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
 
 /* Styles for each contact link to look like a neat list */
 .chat-link {

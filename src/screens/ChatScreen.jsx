@@ -58,11 +58,6 @@ const ChatScreen = () => {
   
   
   return (
-    <div className="chat-screen-root">
-     {/*  <Link to="/chat" className="main-link">
-        <h1 className='Titulo'>Mensajeria en REACT</h1>
-      </Link>
- */}
       <div className='chat-screen'>
 
         <div className={`contact-list ${mobileView === 'detail' ? 'hidden-mobile' : ''}`}>
@@ -89,8 +84,6 @@ const ChatScreen = () => {
           }
         </div>
       </div>
-
-    </div>
     )
 }
 

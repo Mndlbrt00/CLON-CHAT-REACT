@@ -88,11 +88,7 @@
   .back-button { display: none; }
 }
 
-.chat-screen-root {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
+
 
 .main-link .Titulo, .main-link h1 {
   margin: 0 12px; /* ensure header doesn't add extra page height */
